@@ -7,10 +7,7 @@ import { demoUsers } from "@/lib/mock";
 import { roleConfig } from "@/lib/constants";
 import { getFoods, getOrders, getSession, getUsers } from "@/lib/server/backend";
 import { redirect } from "next/navigation";
-
-function currency(value: number) {
-  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
-}
+import { formatGhanaCedis } from "@/lib/money";
 
 export default async function AdminDashboardPage() {
   const [session, users, foods, orders] = await Promise.all([getSession(), getUsers(), getFoods(), getOrders()]);
@@ -122,7 +119,7 @@ export default async function AdminDashboardPage() {
                 <TableRow key={order.id}>
                   <TableCell className="text-white">{order.id}</TableCell>
                   <TableCell className="text-white/70">{order.status}</TableCell>
-                  <TableCell className="text-white/70">{currency(order.total)}</TableCell>
+                  <TableCell className="text-white/70">{formatGhanaCedis(order.total)}</TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -137,7 +134,7 @@ export default async function AdminDashboardPage() {
                     <p className="text-xs text-white/50">{food.vendorName}</p>
                   </div>
                   <Badge variant="secondary" className="bg-emerald-400/10 text-emerald-200">
-                    {currency(food.price)}
+                    {formatGhanaCedis(food.price)}
                   </Badge>
                 </div>
               </div>

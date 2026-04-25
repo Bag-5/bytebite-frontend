@@ -10,10 +10,7 @@ import { roleConfig } from "@/lib/constants";
 import { getFoods, getSession } from "@/lib/server/backend";
 import { redirect } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
-
-function currency(value: number) {
-  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
-}
+import { formatGhanaCedis } from "@/lib/money";
 
 export default async function VendorDashboardPage() {
   const [session, foods] = await Promise.all([getSession(), getFoods()]);
@@ -43,7 +40,7 @@ export default async function VendorDashboardPage() {
       stats={[
         { label: "Items live", value: String(foods.length || demoFoodItems.length) },
         { label: "Conversion rate", value: "31%" },
-        { label: "Today&apos;s revenue", value: "$2,480" },
+        { label: "Today&apos;s revenue", value: formatGhanaCedis(2480) },
       ]}
     >
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
@@ -71,7 +68,7 @@ export default async function VendorDashboardPage() {
                   <p className="text-sm text-white/60">{item.vendorName}</p>
                 </div>
                 <div className="flex items-center gap-4 text-sm text-white/70">
-                  <span>{currency(item.price)}</span>
+                  <span>{formatGhanaCedis(item.price)}</span>
                   <span>{item.eta}</span>
                   <Button variant="outline" size="sm" className="rounded-full border-white/10 bg-white/5 text-white">
                     Edit

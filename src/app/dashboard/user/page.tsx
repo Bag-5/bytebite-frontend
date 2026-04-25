@@ -9,10 +9,7 @@ import { roleConfig } from "@/lib/constants";
 import { getCategories, getFoods, getOrders, getSession } from "@/lib/server/backend";
 import { redirect } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
-
-function currency(value: number) {
-  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
-}
+import { formatGhanaCedis } from "@/lib/money";
 
 export default async function UserDashboardPage() {
   const [session, foods, categories, orders] = await Promise.all([getSession(), getFoods(), getCategories(), getOrders()]);
@@ -64,7 +61,7 @@ export default async function UserDashboardPage() {
                     <h3 className="text-base font-semibold text-white">{food.name}</h3>
                     <p className="mt-1 text-sm text-white/55">{food.vendorName}</p>
                   </div>
-                  <span className="text-sm font-semibold text-cyan-300">{currency(food.price)}</span>
+                    <span className="text-sm font-semibold text-cyan-300">{formatGhanaCedis(food.price)}</span>
                 </div>
                 <p className="mt-3 line-clamp-2 text-sm leading-6 text-white/65">{food.description}</p>
                 <div className="mt-4 flex items-center justify-between text-xs text-white/50">
@@ -109,7 +106,7 @@ export default async function UserDashboardPage() {
                   <TableRow key={order.id}>
                     <TableCell className="font-medium text-white">{order.id}</TableCell>
                     <TableCell className="text-white/70">{order.status}</TableCell>
-                    <TableCell className="text-white/70">{currency(order.total)}</TableCell>
+                    <TableCell className="text-white/70">{formatGhanaCedis(order.total)}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

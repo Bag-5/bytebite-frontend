@@ -4,10 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { getOrders, getSession } from "@/lib/server/backend";
-
-function currency(value: number) {
-  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
-}
+import { formatGhanaCedis } from "@/lib/money";
 
 const statusIcon = {
   Pending: CircleDashed,
@@ -85,7 +82,7 @@ export default async function OrdersPage() {
                           {order.status}
                         </Badge>
                       </TableCell>
-                      <TableCell className="text-white/70">{currency(order.total)}</TableCell>
+                      <TableCell className="text-white/70">{formatGhanaCedis(order.total)}</TableCell>
                     </TableRow>
                   );
                 })}

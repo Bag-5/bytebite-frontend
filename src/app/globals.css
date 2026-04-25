@@ -132,10 +132,10 @@ body {
 }
 
 .light body {
-  @apply bg-white text-slate-950;
+  @apply bg-slate-50 text-slate-900;
   background-image:
-    radial-gradient(circle at top, rgba(59, 130, 246, 0.11), transparent 28%),
-    radial-gradient(circle at 80% 18%, rgba(16, 185, 129, 0.09), transparent 24%),
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.08), transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(16, 185, 129, 0.06), transparent 24%),
     linear-gradient(to bottom, rgba(248, 250, 252, 1), rgba(241, 245, 249, 1));
 }
 
@@ -145,6 +145,40 @@ body {
 
 .light * {
   border-color: rgb(15 23 42 / 0.08);
+}
+
+.light .text-white,
+.light .text-white\/95,
+.light .text-white\/90 {
+  color: rgb(15 23 42) !important;
+}
+
+.light .text-white\/80,
+.light .text-white\/75,
+.light .text-white\/70,
+.light .text-white\/65,
+.light .text-white\/60,
+.light .text-white\/55,
+.light .text-white\/50,
+.light .text-white\/45 {
+  color: rgb(71 85 105) !important;
+}
+
+.light .bg-white\/5,
+.light .bg-white\/6,
+.light .bg-white\/8,
+.light .bg-white\/10,
+.light .bg-white\/12,
+.light .bg-slate-950\/60,
+.light .bg-slate-950\/70,
+.light .bg-slate-950\/80 {
+  background-color: rgb(255 255 255 / 0.92) !important;
+}
+
+.light .border-white\/8,
+.light .border-white\/10,
+.light .border-white\/12 {
+  border-color: rgb(226 232 240) !important;
 }
 
 ::selection {

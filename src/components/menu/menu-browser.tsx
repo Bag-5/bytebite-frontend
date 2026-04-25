@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCart } from "@/components/cart/cart-provider";
 import type { Category, FoodItem } from "@/lib/mock";
+import { formatGhanaCedis } from "@/lib/money";
 
 interface MenuBrowserProps {
   categories: Category[];
@@ -66,7 +67,7 @@ export function MenuBrowser({ categories, foods }: MenuBrowserProps) {
                   <CardTitle className="text-lg text-white">{food.name}</CardTitle>
                   <CardDescription className="text-white/60">{food.vendorName}</CardDescription>
                 </div>
-                <span className="text-lg font-semibold text-cyan-300">${food.price.toFixed(2)}</span>
+                <span className="text-lg font-semibold text-cyan-300">{formatGhanaCedis(food.price)}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/55">
                 <span className="inline-flex items-center gap-1">

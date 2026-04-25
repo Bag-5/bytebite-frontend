@@ -42,10 +42,10 @@ export const primaryNavigation = [
   { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
 ];
 
-export const featurePills = ["JWT auth", "Google sign-in", "Role dashboards", "Responsive UI", "Vercel ready", "Render backend"];
-
 export const shellStats = [
   { label: "Orders delivered today", value: "1,284" },
   { label: "Partner vendors", value: "78" },
   { label: "On-time rate", value: "98.6%" },
 ];
+
+export const authHighlights = ["Campus dining", "Fast checkout", "Secure sessions"];

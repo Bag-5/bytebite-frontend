@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { ShieldCheck, Sparkles, UtensilsCrossed } from "lucide-react";
-import { appName, featurePills } from "@/lib/constants";
+import { appName, authHighlights } from "@/lib/constants";
 
 export function AuthShell({ children, eyebrow, title, description }: Readonly<{ children: ReactNode; eyebrow: string; title: string; description: string }>) {
   return (
@@ -25,7 +25,7 @@ export function AuthShell({ children, eyebrow, title, description }: Readonly<{ 
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {featurePills.map((pill) => (
+            {authHighlights.map((pill) => (
               <span key={pill} className="rounded-full border border-white/10 bg-white/8 px-3 py-1 text-xs font-medium text-white/75">
                 {pill}
               </span>

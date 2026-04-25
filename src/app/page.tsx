@@ -1,32 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Truck, UtensilsCrossed } from "lucide-react";
-import { featurePills, shellStats } from "@/lib/constants";
+import { shellStats } from "@/lib/constants";
 import { demoFoodItems } from "@/lib/mock";
+import { formatGhanaCedis } from "@/lib/money";
 
 export default function HomePage() {
   return (
     <main className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
       <section className="grid gap-8 py-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:py-16">
         <div className="space-y-8">
-          <div className="flex flex-wrap gap-2">
-            {featurePills.map((pill) => (
-              <span key={pill} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/70 backdrop-blur">
-                {pill}
-              </span>
-            ))}
-          </div>
-
           <div className="space-y-5">
             <p className="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
               <BadgeCheck className="h-3.5 w-3.5" />
-              Production-ready campus delivery
+              Ghana campus delivery
             </p>
             <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Fast, polished food delivery for every campus table, desk, and late-night study session.
+              Fast, polished food delivery for every campus table, desk, and late-night study session in Ghana.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-300">
-              ByteBite keeps browsing, ordering, vendor management, and admin operations in one elegant frontend connected to your Render backend.
+              ByteBite keeps browsing, ordering, vendor management, and admin operations in one elegant frontend connected to your API.
             </p>
           </div>
 
@@ -74,7 +67,7 @@ export default function HomePage() {
                       <div>
                         <div className="flex items-center justify-between gap-3">
                           <h2 className="font-medium text-white">{item.name}</h2>
-                          <span className="text-sm font-semibold text-cyan-300">${item.price.toFixed(2)}</span>
+                          <span className="text-sm font-semibold text-cyan-300">{formatGhanaCedis(item.price)}</span>
                         </div>
                         <p className="mt-1 line-clamp-2 text-sm leading-6 text-white/60">{item.description}</p>
                       </div>

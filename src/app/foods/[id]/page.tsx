@@ -7,10 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FoodDetailActions } from "@/components/menu/food-detail-actions";
 import { getFoodById, getSession } from "@/lib/server/backend";
-
-function currency(value: number) {
-  return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
-}
+import { formatGhanaCedis } from "@/lib/money";
 
 export default async function FoodDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -50,7 +47,7 @@ export default async function FoodDetailPage({ params }: { params: Promise<{ id:
               <CardTitle className="text-3xl text-white">{food.name}</CardTitle>
               <CardDescription className="text-white/60">{food.vendorName}</CardDescription>
             </div>
-            <div className="text-3xl font-semibold text-cyan-300">{currency(food.price)}</div>
+            <div className="text-3xl font-semibold text-cyan-300">{formatGhanaCedis(food.price)}</div>
           </div>
           <div className="flex flex-wrap gap-2">
             <Badge variant="outline" className="border-white/10 bg-white/5 text-white/70">
