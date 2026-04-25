@@ -9,12 +9,12 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-white/8 bg-slate-950/80 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-glow">
-            <Image src="/bytebit-logo1.png" alt={`${appName} logo`} width={44} height={44} priority className="h-11 w-11 object-cover" />
+          <span className="grid h-14 w-14 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white p-1.5 shadow-glow">
+            <Image src="/bytebit-logo1.png" alt={`${appName} logo`} width={56} height={56} priority className="h-11 w-11 object-contain" />
           </span>
           <span className="hidden sm:block">
             <span className="block text-sm font-semibold tracking-tight text-white">{appName}</span>
-            <span className="block text-xs text-white/55">Campus food delivery</span>
+            <span className="block text-xs font-bold text-sky-300">Campus food delivery</span>
           </span>
         </Link>
 

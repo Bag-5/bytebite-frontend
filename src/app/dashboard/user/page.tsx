@@ -47,7 +47,7 @@ export default async function UserDashboardPage() {
           <CardHeader className="flex-row items-center justify-between gap-4">
             <div>
               <CardTitle className="text-xl text-white">Trending on campus</CardTitle>
-              <CardDescription className="text-white/60">Live menu items surfaced from the backend when available.</CardDescription>
+              <CardDescription className="text-white/60">Live menu items available right now.</CardDescription>
             </div>
             <Badge variant="secondary" className="bg-emerald-400/10 text-emerald-200">
               {foods.length} dishes

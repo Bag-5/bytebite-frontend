@@ -47,18 +47,20 @@ export function DashboardShell({ role, session, title, description, nav, childre
               </div>
               <Badge variant="outline" className="w-fit border-white/10 bg-white/5 text-white/70">
                 <Shield className="mr-1.5 h-3.5 w-3.5" />
-                Role secured
+                Campus access
               </Badge>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3">
-                <Image
-                  src={session.avatarUrl || "/bytebit-logo1.png"}
-                  alt={session.name}
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 rounded-2xl object-cover"
-                />
+                <div className="grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white p-1.5">
+                  <Image
+                    src={session.avatarUrl || "/bytebit-logo1.png"}
+                    alt={session.name}
+                    width={48}
+                    height={48}
+                    className={session.avatarUrl ? "h-10 w-10 rounded-full object-cover" : "h-9 w-9 object-contain"}
+                  />
+                </div>
                 <div className="min-w-0">
                   <p className="truncate text-sm font-medium text-white">{session.name}</p>
                   <p className="truncate text-xs text-white/55">{session.role}</p>

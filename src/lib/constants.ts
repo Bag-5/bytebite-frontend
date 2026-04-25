@@ -48,4 +48,4 @@ export const shellStats = [
   { label: "On-time rate", value: "98.6%" },
 ];
 
-export const authHighlights = ["Campus dining", "Fast checkout", "Secure sessions"];
+export const authHighlights = ["Campus dining", "Fast checkout", "Easy sign in"];

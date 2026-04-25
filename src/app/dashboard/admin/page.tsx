@@ -44,7 +44,7 @@ export default async function AdminDashboardPage() {
         <Card className="border-white/10 bg-white/5 shadow-glow">
           <CardHeader>
             <CardTitle className="text-xl text-white">Platform health</CardTitle>
-            <CardDescription className="text-white/60">A compact view of the highest-signal operational metrics.</CardDescription>
+            <CardDescription className="text-white/60">A compact view of the highest-signal campus metrics.</CardDescription>
           </CardHeader>
           <CardContent className="grid gap-3 sm:grid-cols-2">
             {[
@@ -68,7 +68,7 @@ export default async function AdminDashboardPage() {
         <Card className="border-white/10 bg-white/5 shadow-glow">
           <CardHeader>
             <CardTitle className="text-xl text-white">Users and roles</CardTitle>
-            <CardDescription className="text-white/60">A clear table for operational review and access audits.</CardDescription>
+            <CardDescription className="text-white/60">A clear table for review and access checks.</CardDescription>
           </CardHeader>
           <CardContent>
             <Table>
@@ -100,11 +100,11 @@ export default async function AdminDashboardPage() {
         </Card>
       </div>
 
-      <Card className="border-white/10 bg-white/5 shadow-glow">
-        <CardHeader>
-          <CardTitle className="text-xl text-white">Orders and catalog</CardTitle>
-          <CardDescription className="text-white/60">A compact audit view for food items and order totals.</CardDescription>
-        </CardHeader>
+        <Card className="border-white/10 bg-white/5 shadow-glow">
+          <CardHeader>
+            <CardTitle className="text-xl text-white">Orders and catalog</CardTitle>
+            <CardDescription className="text-white/60">A compact overview of food items and order totals.</CardDescription>
+          </CardHeader>
         <CardContent className="grid gap-6 lg:grid-cols-2">
           <Table>
             <TableHeader>

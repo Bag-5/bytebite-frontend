@@ -67,14 +67,14 @@ export default function SignInPage() {
     <AuthShell
       eyebrow="Secure access"
       title="Sign in and keep your campus orders moving."
-      description="Use your email/password or Google sign-in to get into your role-aware dashboard, order history, and live menu flows."
+      description="Use your email/password or Google sign-in to get into your dashboard, order history, and live menu flows."
     >
       <Card className="border-white/10 bg-white/5 shadow-glow">
         <CardHeader className="space-y-2">
           <div className="flex items-center justify-between gap-3">
             <div>
               <CardTitle className="text-2xl text-white">Sign in</CardTitle>
-              <CardDescription className="text-white/60">JWT-backed access for users, vendors, and admins.</CardDescription>
+              <CardDescription className="text-white/60">Quick access for users, vendors, and admins.</CardDescription>
             </div>
             <Badge variant="secondary" className="bg-cyan-400/10 text-cyan-200">
               Campus

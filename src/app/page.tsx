@@ -11,7 +11,7 @@ export default function HomePage() {
       <section className="grid gap-8 py-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:py-16">
         <div className="space-y-8">
           <div className="space-y-5">
-            <p className="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
+            <p className="inline-flex items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-sky-300">
               <BadgeCheck className="h-3.5 w-3.5" />
               Ghana campus delivery
             </p>
@@ -19,7 +19,7 @@ export default function HomePage() {
               Fast, polished food delivery for every campus table, desk, and late-night study session in Ghana.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-300">
-              ByteBite keeps browsing, ordering, vendor management, and admin operations in one elegant frontend connected to your API.
+              ByteBite brings browsing, ordering, vendor tools, and admin views together in one elegant place.
             </p>
           </div>
 
@@ -99,8 +99,8 @@ export default function HomePage() {
             desc: "Cart, checkout, and order history flows designed to stay clear on both desktop and mobile.",
           },
           {
-            title: "Role-aware operations",
-            desc: "User, vendor, and admin dashboards each get the navigation and actions they actually need.",
+            title: "Dedicated dashboards",
+            desc: "User, vendor, and admin spaces each get the navigation and actions they actually need.",
           },
         ].map((item) => (
           <div key={item.title} className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow">

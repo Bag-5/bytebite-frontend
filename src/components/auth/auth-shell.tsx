@@ -10,8 +10,8 @@ export function AuthShell({ children, eyebrow, title, description }: Readonly<{ 
         <div className="absolute inset-0 bg-hero-grid opacity-80" />
         <div className="relative space-y-6">
           <div className="flex items-center gap-3">
-            <div className="grid h-14 w-14 place-items-center overflow-hidden rounded-2xl border border-white/10 bg-black/30">
-              <Image src="/bytebit-logo1.png" alt={`${appName} logo`} width={56} height={56} className="h-14 w-14 object-cover" />
+            <div className="grid h-16 w-16 place-items-center overflow-hidden rounded-xl border border-white/10 bg-white p-1.5">
+              <Image src="/bytebit-logo1.png" alt={`${appName} logo`} width={64} height={64} className="h-12 w-12 object-contain" />
             </div>
             <div>
               <p className="text-xs uppercase tracking-[0.22em] text-white/55">{eyebrow}</p>
@@ -34,9 +34,9 @@ export function AuthShell({ children, eyebrow, title, description }: Readonly<{ 
 
           <div className="grid gap-3 sm:grid-cols-3">
             {[
-              { label: "Secure JWT", icon: ShieldCheck },
+              { label: "Campus dining", icon: ShieldCheck },
               { label: "Fast checkout", icon: UtensilsCrossed },
-              { label: "Polished UX", icon: Sparkles },
+              { label: "Polished experience", icon: Sparkles },
             ].map((item) => {
               const Icon = item.icon;
               return (

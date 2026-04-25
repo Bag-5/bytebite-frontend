@@ -86,7 +86,7 @@ export function CheckoutPanel() {
           </div>
           <div className="flex items-center gap-3">
             <CreditCard className="h-4 w-4 text-cyan-300" />
-            <p className="text-sm text-white/55">Securely processed through the backend checkout flow when available.</p>
+            <p className="text-sm text-white/55">Processed through the checkout flow when available.</p>
           </div>
           <Button
             className="h-11 w-full rounded-full"
@@ -94,7 +94,7 @@ export function CheckoutPanel() {
             onClick={async () => {
               try {
                 setLoading(true);
-                // The frontend stays functional even when the backend contract changes.
+                // The frontend stays functional even when the checkout flow changes.
                 await fetch("/api/proxy/orders", {
                   method: "POST",
                   headers: { "Content-Type": "application/json" },

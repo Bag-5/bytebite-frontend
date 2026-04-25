@@ -1,13 +1,12 @@
 # ByteBite Frontend
 
-ByteBite is a campus food delivery frontend built with Next.js App Router, TypeScript, Tailwind CSS, and shadcn/ui. It is designed to deploy on Vercel and connect to a separate Render-hosted backend.
+ByteBite is a campus food delivery frontend built with Next.js App Router, TypeScript, Tailwind CSS, and shadcn/ui. It is designed to deploy on Vercel and connect to a separate API service.
 
 ## Features
 
 - Modern responsive UI with light, dark, and system theme support
 - Email/password sign-in and registration
 - Google sign-in via OAuth client ID
-- JWT-backed session handling
 - Role-based dashboards for:
   - User
   - Vendor
@@ -29,7 +28,7 @@ ByteBite is a campus food delivery frontend built with Next.js App Router, TypeS
 Set these in Vercel and in your local `.env.local` file:
 
 ```bash
-NEXT_PUBLIC_API_BASE_URL=https://your-render-backend-url
+NEXT_PUBLIC_API_BASE_URL=https://your-api-url
 NEXT_PUBLIC_GOOGLE_CLIENT_ID=your-google-oauth-client-id
 ```
 
@@ -73,6 +72,6 @@ npm run build
 
 ## Notes
 
-- This frontend is intentionally separated from the backend.
-- The repo includes fallback demo data so the UI stays usable even before backend data is available.
+- This frontend is intentionally separated from the API service.
+- The repo includes fallback demo data so the UI stays usable even before live data is available.
 - Google sign-in requires the OAuth client ID configured in both Google Cloud and Vercel.

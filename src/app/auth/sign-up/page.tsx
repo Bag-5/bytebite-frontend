@@ -70,12 +70,12 @@ export default function SignUpPage() {
     <AuthShell
       eyebrow="Join ByteBite"
       title="Create your account and unlock campus ordering."
-      description="Start with email/password, and use Google when your backend supports it. Vendor access can be provisioned through the same flow or by backend role assignment."
+      description="Start with email/password, and use Google when you prefer it. Vendor access can be added separately."
     >
       <Card className="border-white/10 bg-white/5 shadow-glow">
         <CardHeader className="space-y-2">
           <CardTitle className="text-2xl text-white">Create account</CardTitle>
-          <CardDescription className="text-white/60">We keep onboarding simple and let your backend control the final role.</CardDescription>
+          <CardDescription className="text-white/60">We keep onboarding simple and assign access as needed.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-5">
           {serverError ? (

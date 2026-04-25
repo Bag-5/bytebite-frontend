@@ -147,5 +147,5 @@ export const demoOrders: OrderSummary[] = [
 export const demoUsers: TeamUser[] = [
   { id: "usr_101", name: "Ava Johnson", email: "ava@bytebite.app", role: "user", status: "Active" },
   { id: "usr_102", name: "Campus Grill", email: "orders@campusgrill.app", role: "vendor", status: "Active" },
-  { id: "usr_103", name: "ByteBite Admin", email: "admin@bytebite.app", role: "admin", status: "Pending" },
+  { id: "usr_103", name: "ByteBite Admin", email: "baginifred26@gmail.com", role: "admin", status: "Pending" },
 ];
