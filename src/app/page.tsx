@@ -19,7 +19,7 @@ export default function HomePage() {
               Fast, polished food delivery for every campus table, desk, and late-night study session in Ghana.
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-slate-300">
-              ByteBite brings browsing, ordering, vendor tools, and admin views together in one elegant place.
+              Browse meals, manage your cart, and move from menu to checkout without losing momentum.
             </p>
           </div>
 
