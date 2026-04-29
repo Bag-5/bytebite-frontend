@@ -122,7 +122,7 @@ export function DashboardShell({ role, session, title, description, nav, childre
 
                 <Link
                   href="/menu"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/10 bg-white px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 sm:w-auto"
                 >
                   Browse live menu
                   <ArrowUpRight className="h-4 w-4" />

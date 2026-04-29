@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/8 bg-slate-950/80 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-4 sm:gap-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <span className="grid h-16 w-16 place-items-center overflow-hidden rounded-lg border border-white/10 bg-white p-1 shadow-glow">
             <Image src="/bytebit-logo1.png" alt={`${appName} logo`} width={64} height={64} priority className="h-14 w-14 object-contain" />
@@ -38,9 +38,9 @@ export function SiteHeader() {
           <button type="button" className="hidden h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:bg-white/10 hover:text-white sm:inline-flex">
             <Bell className="h-4 w-4" />
           </button>
-          <Link href="/cart" className="inline-flex h-10 items-center gap-2 rounded-full border border-white/10 bg-white px-4 text-sm font-medium text-slate-950 transition hover:bg-slate-100">
+          <Link href="/cart" className="inline-flex h-10 items-center gap-2 rounded-full border border-white/10 bg-white px-3 text-sm font-medium text-slate-950 transition hover:bg-slate-100 sm:px-4">
             <ShoppingBag className="h-4 w-4" />
-            Cart
+            <span className="hidden sm:inline">Cart</span>
           </Link>
           <ThemeToggle />
           <button type="button" className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 transition hover:bg-white/10 hover:text-white md:hidden">

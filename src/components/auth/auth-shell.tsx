@@ -20,8 +20,8 @@ export function AuthShell({ children, eyebrow, title, description }: Readonly<{ 
           </div>
 
           <div className="max-w-xl space-y-4">
-            <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">{title}</h2>
-            <p className="max-w-lg text-base leading-7 text-white/70">{description}</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-5xl">{title}</h2>
+            <p className="max-w-lg text-sm leading-6 text-white/70 sm:text-base sm:leading-7">{description}</p>
           </div>
 
           <div className="flex flex-wrap gap-2">

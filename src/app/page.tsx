@@ -15,20 +15,20 @@ export default function HomePage() {
               <BadgeCheck className="h-3.5 w-3.5" />
               Ghana campus delivery
             </p>
-            <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Fast, polished food delivery for every campus table, desk, and late-night study session in Ghana.
             </h1>
-            <p className="max-w-2xl text-lg leading-8 text-slate-300">
+            <p className="max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
               Browse meals, manage your cart, and move from menu to checkout without losing momentum.
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-3">
-            <Link href="/menu" className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100">
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Link href="/menu" className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100 sm:w-auto">
               Browse menu
               <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href="/auth/sign-in" className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">
+            <Link href="/auth/sign-in" className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/12 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10 sm:w-auto">
               Sign in
             </Link>
           </div>
